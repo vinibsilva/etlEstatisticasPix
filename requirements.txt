@@ -1,5 +1,7 @@
 pandas
 requests
 black
-sqlite3
 sqlalchemy
+matplotlib
+seaborn
+plotly

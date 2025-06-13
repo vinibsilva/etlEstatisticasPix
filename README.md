@@ -43,3 +43,6 @@ A consulta retornará os seguintes campos:
   * **`QT_PES_PagadorPJ`** (decimal): Quantidade de pagadores pessoas jurídicas.
   * **`QT_PES_RecebedorPF`** (decimal): Quantidade de recebedores pessoas físicas.
   * **`QT_PES_RecebedorPJ`** (decimal): Quantidade de recebedores pessoas jurídicas.
+
+
+Link para Dashboard: https://app.powerbi.com/view?r=eyJrIjoiNWIwZmQ5MDYtYmNhOS00NTM4LTg1NTQtOTY4ZTczMDUwMGRjIiwidCI6IjRhMjJmMTE2LTUxY2UtNGZlMy1hZWFhLTljNDYxNDNkMDg4YiJ9

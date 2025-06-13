@@ -13,11 +13,12 @@ def requestApiBcb(data: str) -> pd.DataFrame:
   Saída:
   DataFrame - Estrutura de dados do Pandas.
   """
-  url = f"https://olinda.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata/TransacoesPixPorMunicipio(DataBase=@DataBase)?@DataBase='{data}'&$top=10000&$format=json"
+  url = f"https://olinda.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata/TransacoesPixPorMunicipio(DataBase=@DataBase)?@DataBase='{data}'&$top=6000&$format=json"
 
   req = requests.get(url)
   dados = req.json()
 
   df = pd.json_normalize(dados['value'])
-  df['Data-base'] = pd.to_datetime(df['Data-base'])
+  df['AnoMes'] = df['AnoMes'].astype(str)
+  df['AnoMes'] = pd.to_datetime(df['AnoMes'], format='%Y%m')
   return df
